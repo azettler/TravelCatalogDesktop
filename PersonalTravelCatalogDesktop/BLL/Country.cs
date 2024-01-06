@@ -3,19 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PersonalTravelCatalogDesktop.BLL.Interfaces;
 
-namespace Travel_Catalog_Testing
+namespace PersonalTravelCatalogDesktop
 {
-    public class Country
+    public class Country : ILocation
     {
-        public int id { get; set; }
-
-        public string name { get; set; }
-
-        public bool visited { get; set; }
-
-        public string description { get; set; }
-
         public List<Region> regions { get; set; }
 
         public List<City> cities { get; set; }
@@ -57,6 +50,11 @@ namespace Travel_Catalog_Testing
         public void AddPlace(int placeId, string placeName, string desc)
         {
             places.Add(new Place(id, placeName, desc));
+        }
+
+        public override string ToString()
+        {
+            return name;
         }
     }
 }

@@ -9,11 +9,12 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PersonalTravelCatalogDesktop</RootNamespace>
     <AssemblyName>PersonalTravelCatalogDesktop</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -55,7 +56,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Page Include="ContinentsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TravelCatalogMain.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -66,15 +71,18 @@
     <Compile Include="BLL\City.cs" />
     <Compile Include="BLL\Continent.cs" />
     <Compile Include="BLL\Country.cs" />
+    <Compile Include="BLL\Interfaces\ILocation.cs" />
     <Compile Include="BLL\Landmark.cs" />
     <Compile Include="BLL\LocationIdentifierInformation.cs" />
     <Compile Include="BLL\Place.cs" />
-    <Compile Include="BLL\Program.cs" />
     <Compile Include="BLL\Region.cs" />
     <Compile Include="BLL\Travel Catalog.cs" />
     <Compile Include="BLL\Trip.cs" />
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="ContinentsWindow.xaml.cs">
+      <DependentUpon>ContinentsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TravelCatalogMain.xaml.cs">
+      <DependentUpon>TravelCatalogMain.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalTravelCatalogDesktop", "PersonalTravelCatalogDesktop\PersonalTravelCatalogDesktop.csproj", "{D764694D-B711-4F92-966B-31D73AC8ADA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelCatalogConsole", "TravelCatalogConsole\TravelCatalogConsole.csproj", "{D2672443-1FFF-40BE-ABA7-1708DC2B4D7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{D764694D-B711-4F92-966B-31D73AC8ADA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D764694D-B711-4F92-966B-31D73AC8ADA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D764694D-B711-4F92-966B-31D73AC8ADA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2672443-1FFF-40BE-ABA7-1708DC2B4D7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2672443-1FFF-40BE-ABA7-1708DC2B4D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2672443-1FFF-40BE-ABA7-1708DC2B4D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2672443-1FFF-40BE-ABA7-1708DC2B4D7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14A06BAF-91BD-4445-817F-3415B11A944F}
 	EndGlobalSection
 EndGlobal

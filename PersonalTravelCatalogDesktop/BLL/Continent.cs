@@ -1,19 +1,14 @@
-﻿using System;
+﻿using PersonalTravelCatalogDesktop.BLL.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Travel_Catalog_Testing
+namespace PersonalTravelCatalogDesktop
 {
-    public class Continent
+    public class Continent : ILocation
     {
-        public int id { get; set; }
-
-        public string name { get; set; }
-
-        public bool visited { get; set; }
-
         public List<Country> countries { get; set; }
 
         public Continent()
@@ -35,6 +30,28 @@ namespace Travel_Catalog_Testing
         public void AddCountry(int id, string countryName, string desc)
         {
             countries.Add(new Country(id, countryName, desc));
+        }
+
+        public override string ToString()
+        {
+            return name;
+        }
+
+        public string ListCountries()
+        {
+            string result = "";
+
+            foreach (var country in countries)
+            {
+                result += country.ToString() + Environment.NewLine;
+            }
+
+            return result;
+        }
+
+        public List<Country> GetCountries()
+        {
+            return countries;
         }
     }
 }
