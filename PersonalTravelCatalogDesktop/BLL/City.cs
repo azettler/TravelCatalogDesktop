@@ -9,29 +9,31 @@ namespace PersonalTravelCatalogDesktop
 {
     public class City : ILocation
     {
-        public List<Landmark> landmarks { get; set; }
+        public List<Landmark> Landmarks { get; set; }
 
         public City()
         {
-            id = -1;
-            name = "";
-            landmarks = new List<Landmark>();
-            visited = false;
-            description = "";
+            Id = -1;
+            Name = "";
+            Visited = false;
+            Description = "";
+
+            Landmarks = new List<Landmark>();
         }
 
-        public City(int id, string name, string desc)
+        public City(int id, string name, string desc, bool visited = false)
         {
-            this.id = id;
-            this.name = name;
-            description = desc;
-            landmarks = new List<Landmark>();
-            visited = false;
+            Id = id;
+            Name = name;
+            Description = desc;
+            Visited = visited;
+
+            Landmarks = new List<Landmark>();
         }
 
-        public void AddLandmark(int landmarkId, string landmarkName, string desc)
+        public void AddLandmark(int landmarkId, string landmarkName, string desc, bool visited)
         {
-            landmarks.Add(new Landmark(landmarkId, landmarkName, desc));
+            Landmarks.Add(new Landmark(landmarkId, landmarkName, desc, visited));
         }
     }
 }

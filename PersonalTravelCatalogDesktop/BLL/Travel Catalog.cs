@@ -50,11 +50,11 @@ namespace PersonalTravelCatalogDesktop
             continents[1].AddCountry(7, "Japan", "An Eastern Asian Island country famous for being home to samurai and sushi.");
             continents[2].AddCountry(8, "Australia", "A country that is also a continent");
 
-            continents[1].countries[0].AddCity(9, "Tokyo", "Capital of Japan");
-            continents[2].countries[0].AddRegion(10, "Queensland", "");
+            continents[1].Countries[0].AddCity(9, "Tokyo", "Capital of Japan");
+            continents[2].Countries[0].AddRegion(10, "Queensland", "");
 
-            continents[1].countries[0].cities[0].AddLandmark(11, "Some Tower", "");
-            continents[2].countries[0].AddCity(12, "Auckland", "");
+            continents[1].Countries[0].Cities[0].AddLandmark(11, "Some Tower", "");
+            continents[2].Countries[0].AddCity(12, "Auckland", "");
         }
 
         public void SaveToFile(string filename)

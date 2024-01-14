@@ -11,18 +11,18 @@ namespace PersonalTravelCatalogDesktop
     {
         public Landmark()
         {
-            id = -1;
-            name = "";
-            visited = false;
-            description = "";
+            Id = -1;
+            Name = "";
+            Visited = false;
+            Description = "";
         }
 
-        public Landmark(int id, string name, string desc)
+        public Landmark(int id, string name, string desc, bool visited = false)
         {
-            this.id = id;
-            this.name = name;
-            description = desc;
-            visited = false;
+            Id = id;
+            Name = name;
+            Description = desc;
+            Visited = visited;
         }
     }
 }

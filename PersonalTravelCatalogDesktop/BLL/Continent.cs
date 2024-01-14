@@ -9,39 +9,43 @@ namespace PersonalTravelCatalogDesktop
 {
     public class Continent : ILocation
     {
-        public List<Country> countries { get; set; }
+        public List<Country> Countries { get; set; }
 
         public Continent()
         {
-            id = -1;
-            name = "";
-            countries = new List<Country>();
-            visited = false;
+            Id = -1;
+            Name = "";
+            Description = "";
+            Visited = false;
+
+            Countries = new List<Country>();
         }
 
-        public Continent(int id, string name)
+        public Continent(int id, string name, string desc)
         {
-            this.id = id;
-            this.name = name;
-            countries = new List<Country>();
-            visited = false;
+            Id = id;
+            Name = name;
+            Description = desc;
+            Visited = false;
+
+            Countries = new List<Country>();
         }
 
-        public void AddCountry(int id, string countryName, string desc)
+        public void AddCountry(int id, string countryName, string desc, bool visited = false)
         {
-            countries.Add(new Country(id, countryName, desc));
+            Countries.Add(new Country(id, countryName, desc, visited));
         }
 
         public override string ToString()
         {
-            return name;
+            return Name;
         }
 
         public string ListCountries()
         {
             string result = "";
 
-            foreach (var country in countries)
+            foreach (var country in Countries)
             {
                 result += country.ToString() + Environment.NewLine;
             }
@@ -51,7 +55,7 @@ namespace PersonalTravelCatalogDesktop
 
         public List<Country> GetCountries()
         {
-            return countries;
+            return Countries;
         }
     }
 }

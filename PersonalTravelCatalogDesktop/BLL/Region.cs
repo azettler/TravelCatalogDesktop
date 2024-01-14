@@ -9,38 +9,49 @@ namespace PersonalTravelCatalogDesktop
 {
     public class Region : ILocation
     {
-        public List<City> cities { get; set; }
+        public List<City> Cities { get; set; }
 
-        public List<Place> places { get; set; }
+        public List<Place> Places { get; set; }
+
+        public List<Landmark> Landmarks { get; set; }
 
         public Region()
         {
-            id = -1;
-            name = "";
-            cities = new List<City>();
-            places = new List<Place>();
-            visited = false;
-            description = "";
+            Id = -1;
+            Name = "";
+            Visited = false;
+            Description = "";
+
+            Cities = new List<City>();
+            Places = new List<Place>();
+            Landmarks = new List<Landmark>();
         }
 
-        public Region(int id, string name, string desc)
+        public Region(int id, string name, string desc, bool visited = false)
         {
-            this.id = id;
-            this.name = name;
-            description = desc;
-            cities = new List<City>();
-            places = new List<Place>();
-            visited = false;
+            Id = id;
+            Name = name;
+            Description = desc;
+            Visited = false;
+
+            Cities = new List<City>();
+            Places = new List<Place>();
+            Landmarks = new List<Landmark>();
         }
 
-        public void AddCity(int cityId, string cityName, string desc)
+        public void AddCity(int cityId, string cityName, string desc, bool visited = false)
         {
-            cities.Add(new City(id, cityName, desc));
+            Cities.Add(new City(Id, cityName, desc, visited));
         }
 
-        public void AddPlace(int placeId, string placeName, string desc)
+        public void AddPlace(int placeId, string placeName, string desc, bool visited = false)
         {
-            places.Add(new Place(id, placeName, desc));
+            Places.Add(new Place(Id, placeName, desc, visited));
+        }
+
+        public void AddLandmark(int placeId, string placeName, string desc, bool visited = false)
+        {
+            Landmarks.Add(new Landmark(Id, placeName, desc, visited));
         }
     }
 }

@@ -8,12 +8,14 @@ namespace PersonalTravelCatalogDesktop.BLL.Interfaces
 {
     public class ILocation
     {
-        public int id { get; set; }
+        public int Id { get; set; }
 
-        public string name { get; set; }
+        public string Name { get; set; }
 
-        public bool visited { get; set; }
+        public bool Visited { get; set; }
 
-        public string description { get; set; }
+        public string Description { get; set; }
+
+        public DateTime CreatedDate { get; set; }
     }
 }

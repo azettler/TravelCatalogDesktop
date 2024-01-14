@@ -9,52 +9,63 @@ namespace PersonalTravelCatalogDesktop
 {
     public class Country : ILocation
     {
-        public List<Region> regions { get; set; }
+        public List<Region> Regions { get; set; }
 
-        public List<City> cities { get; set; }
+        public List<City> Cities { get; set; }
 
-        public List<Place> places { get; set; }
+        public List<Place> Places { get; set; }
+
+        public List<Landmark> Landmarks { get; set; }
 
         public Country()
         {
-            id = -1;
-            name = "";
-            regions = new List<Region>();
-            cities = new List<City>();
-            places = new List<Place>();
-            visited = false;
-            description = "";
+            Id = -1;
+            Name = "";
+            Visited = false;
+            Description = "";
+
+            Regions = new List<Region>();
+            Cities = new List<City>();
+            Places = new List<Place>();
+            Landmarks = new List<Landmark>();
         }
 
-        public Country(int id, string name, string description)
+        public Country(int id, string name, string description, bool visited = false)
         {
-            this.id = id;
-            this.name = name;
-            regions = new List<Region>();
-            cities = new List<City>();
-            places = new List<Place>();
-            visited = false;
-            this.description = description;
+            Id = id;
+            Name = name;
+            Visited = visited;
+            Description = description;
+
+            Regions = new List<Region>();
+            Cities = new List<City>();
+            Places = new List<Place>();
+            Landmarks = new List<Landmark>();
         }
 
-        public void AddRegion(int regionId, string regionName, string desc)
+        public void AddRegion(int regionId, string regionName, string desc, bool visited = false)
         {
-            regions.Add(new Region(id, regionName, desc));
+            Regions.Add(new Region(Id, regionName, desc, visited));
         }
 
-        public void AddCity(int cityId, string cityName, string desc)
+        public void AddCity(int cityId, string cityName, string desc, bool visited = false)
         {
-            cities.Add(new City(id, cityName, desc));
+            Cities.Add(new City(Id, cityName, desc, visited));
         }
 
-        public void AddPlace(int placeId, string placeName, string desc)
+        public void AddPlace(int placeId, string placeName, string desc, bool visited = false)
         {
-            places.Add(new Place(id, placeName, desc));
+            Places.Add(new Place(Id, placeName, desc, visited));
+        }
+
+        public void AddLandmark(int placeId, string placeName, string desc, bool visited = false)
+        {
+            Landmarks.Add(new Landmark(Id, placeName, desc, visited));
         }
 
         public override string ToString()
         {
-            return name;
+            return Name;
         }
     }
 }
